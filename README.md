@@ -1,24 +1,16 @@
 # Insider-Threat Detection Using Unsupervised Machine Learning and Behavioural Anomaly Analysis
 
-An academic M.Tech Cyber Security project that analyses daily user-behaviour telemetry and ranks unusual user-days for further investigation using unsupervised machine-learning techniques.
+An academic cybersecurity project that analyses daily user-behaviour telemetry and ranks unusual user-days for further investigation using unsupervised machine-learning techniques.
 
 > **Important:** This project produces anomaly indicators and investigation candidates. It does not establish that a user is malicious or confirm an insider-threat incident.
 
-## Project information
+## Project overview
 
-- **Institution:** IIIT Sri City
-- **Programme:** M.Tech Cyber Security
-- **Academic year:** 2026–2027
-- **Course instructor:** Dr. Amilpur Santhosh
+- **Domain:** Cybersecurity — Insider-Threat Detection
+- **Approach:** Unsupervised machine learning and behavioural anomaly analysis
 - **Dataset:** CERT Insider Threat Test Dataset r4.2
-
-### Project team
-
-| Name | Student ID |
-|---|---|
-| Amey Patil | OMCS25S00059 |
-| Omkar Patil | OMCS25S00055 |
-| Chaitanya Sukasi | OMCS25S00086 |
+- **Implementation:** Python
+- **Models:** Isolation Forest and One-Class SVM
 
 ## Overview
 
@@ -124,22 +116,10 @@ The analysis identified activity sequences and some features above the user's hi
 ```text
 insider-threat-detection-ml/
 ├── assets/                 # Approved project assets
-├── figures/                # Generated analysis and investigation figures
-├── notebooks/              # Reviewed exploratory notebooks
-├── reports/                # Reviewed reports and presentation material
-├── src/
-│   ├── 01_dataset_inventory.py
-│   ├── 02_data_validation.py
-│   ├── 03_exploratory_analysis.py
-│   ├── 04_feature_engineering.py
-│   ├── 05_temporal_split.py
-│   ├── 06_model_training.py
-│   ├── 07_model_evaluation.py
-│   ├── 08_user_behavior_analysis.py
-│   ├── 09_dfir_investigation.py
-│   ├── 10_dfir_visualization.py
-│   ├── 11_generate_final_report.py
-│   └── 12_Final_project_Report.py
+├── figures/                # Generated analysis figures
+├── notebooks/              # Exploratory notebooks (not included in initial public release)
+├── reports/                # Project reports (not included in initial public release)
+├── src/                    # Python pipeline scripts
 ├── config.py
 ├── requirements.txt
 ├── .gitignore
@@ -150,16 +130,13 @@ The exact local data and output folders are created by the project scripts/confi
 
 ## Figures
 
-The `figures/` directory contains the generated visualizations, including:
+The `figures/` directory contains generated visualizations, including:
 
 - Zero-activity analysis and feature distributions
 - Spearman correlation heatmap
 - Monthly activity trends
 - Model anomaly rates and agreement
 - Daily anomaly trends and score distributions
-- Repeated anomalous-user summaries
-- Selected investigation timeline and hourly activity
-- Historical percentile and case-versus-baseline comparisons
 
 ## Setup
 
@@ -219,7 +196,7 @@ Check each script's configuration and prerequisites before execution. The report
 
 ## Evaluation and limitations
 
-- The dataset version used in this project does not include a verified ground-truth labels file (`insiders.csv`) in the analysed project inputs. Therefore, supervised metrics such as accuracy, precision, recall, F1-score, ROC-AUC and false-positive rate are not reported as validated results.
+- The analysed project inputs do not include a verified ground-truth labels file (`insiders.csv`). Therefore, supervised metrics such as accuracy, precision, recall, F1-score, ROC-AUC and false-positive rate are not reported as validated results.
 - The One-Class SVM was trained on a 10,000-row sample due to computational considerations.
 - DBSCAN results in the exploratory source material cover a 30,000-row sample only and must not be generalized to the full dataset.
 - Agreement between two unsupervised models does not establish correctness.
@@ -243,4 +220,4 @@ The scripts use a fixed random state where configured. The chronological split a
 
 ---
 
-**Academic project — IIIT Sri City, M.Tech Cyber Security, 2026–2027.**
+**Cybersecurity research project — Insider-Threat Detection using Unsupervised Machine Learning.**
