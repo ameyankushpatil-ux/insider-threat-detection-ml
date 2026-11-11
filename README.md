@@ -128,15 +128,31 @@ insider-threat-detection-ml/
 
 The exact local data and output folders are created by the project scripts/configuration as needed and are intentionally not tracked in this repository.
 
-## Figures
+## Visual results
 
-The `figures/` directory contains generated visualizations, including:
+The following figures are included in this repository. GitHub displays them directly in the README using repository-relative image paths.
 
-- Zero-activity analysis and feature distributions
-- Spearman correlation heatmap
-- Monthly activity trends
-- Model anomaly rates and agreement
-- Daily anomaly trends and score distributions
+### Behavioural data exploration
+
+![Zero-activity analysis](figures/01_zero_activity_analysis.png)
+
+![Feature distributions](figures/02_feature_distributions.png)
+
+![Spearman correlation heatmap](figures/03_spearman_correlation.png)
+
+![Monthly activity trends](figures/04_monthly_activity_trends.png)
+
+### Model evaluation
+
+![Model anomaly rates](figures/05_model_anomaly_rates.png)
+
+![Model agreement](figures/06_model_agreement.png)
+
+![Daily anomaly trends](figures/07_daily_anomaly_trends.png)
+
+![Anomaly score distributions](figures/08_anomaly_score_distributions.png)
+
+The `figures/` directory contains the full set of generated visualizations. Additional investigation-specific figures are kept out of the initial public release pending a privacy review.
 
 ## Setup
 
